@@ -1,0 +1,427 @@
+@import "tailwindcss";
+
+@theme {
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-mono: 'JetBrains Mono', monospace;
+
+    --color-primary-50: #f0f9ff;
+    --color-primary-100: #e0f2fe;
+    --color-primary-200: #bae6fd;
+    --color-primary-300: #7dd3fc;
+    --color-primary-400: #38bdf8;
+    --color-primary-500: #0ea5e9;
+    --color-primary-600: #0284c7;
+    --color-primary-700: #0369a1;
+    --color-primary-800: #075985;
+    --color-primary-900: #0c4a6e;
+
+    --color-accent-400: #a78bfa;
+    --color-accent-500: #8b5cf6;
+    --color-accent-600: #7c3aed;
+}
+
+/* ── Theme CSS variables ── */
+:root {
+    --bg-body: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    --text-body: #f1f5f9;
+    --text-heading: #ffffff;
+    --text-muted: #94a3b8;
+    --text-muted-2: #64748b;
+
+    /* Glass */
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    --glass-card-hover-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    --glass-card-hover-shadow: rgba(14, 165, 233, 0.1);
+
+    /* Elements */
+    --input-bg: rgba(30, 41, 59, 0.5);
+    --input-border: #334155;
+    --scrollbar-track: rgba(15, 23, 42, 0.5);
+    --selection-bg: rgba(14, 165, 233, 0.4);
+    --selection-color: white;
+    --divider: rgba(255, 255, 255, 0.1);
+    --grid-color: rgba(148, 163, 184, 0.03);
+    --orb-opacity: 1;
+}
+
+html.light {
+    --bg-body: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f8fafc 100%);
+    --text-body: #1e293b;
+    --text-heading: #0f172a;
+    --text-muted: #64748b;
+    --text-muted-2: #94a3b8;
+
+    /* Glass */
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(15, 23, 42, 0.08);
+    --glass-card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%);
+    --glass-card-hover-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 100%);
+    --glass-card-hover-shadow: rgba(14, 165, 233, 0.15);
+
+    /* Elements */
+    --input-bg: rgba(241, 245, 249, 0.8);
+    --input-border: #cbd5e1;
+    --scrollbar-track: rgba(241, 245, 249, 0.8);
+    --selection-bg: rgba(14, 165, 233, 0.3);
+    --selection-color: #0f172a;
+    --divider: rgba(15, 23, 42, 0.08);
+    --grid-color: rgba(148, 163, 184, 0.06);
+    --orb-opacity: 0.35;
+}
+
+@layer base {
+    * {
+        scroll-behavior: smooth;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-family-inter);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: var(--bg-body);
+        color: var(--text-body);
+        min-height: 100vh;
+        transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    ::selection {
+        background: var(--selection-bg);
+        color: var(--selection-color);
+    }
+}
+
+@layer utilities {
+    .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+    }
+
+    .glass-light {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+    }
+
+    .glass-card {
+        background: var(--glass-card-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+        border-color: rgba(14, 165, 233, 0.3);
+        background: var(--glass-card-hover-bg);
+        box-shadow: 0 8px 32px var(--glass-card-hover-shadow);
+    }
+
+    /* Theme-aware text colors */
+    .t-heading {
+        color: var(--text-heading);
+    }
+
+    .t-body {
+        color: var(--text-body);
+    }
+
+    .t-muted {
+        color: var(--text-muted);
+    }
+
+    .t-muted-2 {
+        color: var(--text-muted-2);
+    }
+
+    .text-gradient {
+        background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #0ea5e9 100%);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: gradient-shift 4s ease infinite;
+    }
+
+    .text-gradient-static {
+        background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .glow {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.3),
+            0 0 40px rgba(14, 165, 233, 0.2),
+            0 0 60px rgba(14, 165, 233, 0.1);
+    }
+
+    .glow-accent {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.3),
+            0 0 40px rgba(139, 92, 246, 0.2);
+    }
+
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-pulse-glow {
+        animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    .animate-gradient {
+        animation: gradient-shift 4s ease infinite;
+    }
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(14, 165, 233, 0.5), 0 0 60px rgba(14, 165, 233, 0.3);
+    }
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes orb-float-1 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translate(50px, -30px) scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+@keyframes orb-float-2 {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1.2);
+        opacity: 0.2;
+    }
+
+    50% {
+        transform: translate(-50px, 50px) scale(1);
+        opacity: 0.4;
+    }
+}
+
+@keyframes orb-float-3 {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.15;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.3;
+    }
+}
+
+@keyframes float-badge-1 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(5deg);
+    }
+}
+
+@keyframes float-badge-2 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(8px) rotate(-3deg);
+    }
+}
+
+@keyframes hero-glow {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes hero-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes scroll-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes progress-shimmer {
+    0% {
+        transform: translateX(-100%) skewX(-12deg);
+    }
+
+    100% {
+        transform: translateX(200%) skewX(-12deg);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dot-pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0ea5e9, #8b5cf6);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #38bdf8, #a78bfa);
+}
+
+/* Vue Transitions */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.6s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+    max-height: 0;
+    opacity: 0;
+}
+
+.slide-down-enter-to,
+.slide-down-leave-from {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.section-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

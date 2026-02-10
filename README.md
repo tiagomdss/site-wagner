@@ -60,4 +60,4 @@ Este projeto está pronto para ser implantado na **Vercel** ou **Netlify** com z
 
 ---
 
-Desenvolvido com 💙 por **Wagner Calazans**
+Desenvolvido com 💙 para **Wagner Calazans**

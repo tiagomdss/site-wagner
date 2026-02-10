@@ -12,11 +12,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'pt-BR', class: 'dark' },
-      title: 'Wagner Philippe Calazans – Administrador de Sistemas Linux Sênior',
+      title: 'Wagner Calazans – Administrador de Sistemas Linux Sênior',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Portfólio de Wagner Philippe Calazans – Mestrando em Sistemas, Engenheiro da Computação e Analista de Sistemas. Especialista em Linux, virtualização, cloud e DevOps.' },
+        { name: 'description', content: 'Portfólio de Wagner Calazans – Mestrando em Sistemas, Engenheiro da Computação e Analista de Sistemas. Especialista em Linux, virtualização, cloud e DevOps.' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },

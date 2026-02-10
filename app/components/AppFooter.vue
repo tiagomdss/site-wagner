@@ -72,7 +72,7 @@
         <!-- Bottom -->
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="t-muted-2 text-sm">
-            © {{ currentYear }} Wagner Philippe Calazans. Todos os direitos reservados.
+            © {{ currentYear }} Wagner Calazans. Todos os direitos reservados.
           </p>
           <p class="t-muted-2 text-sm flex items-center gap-2">
             Feito com

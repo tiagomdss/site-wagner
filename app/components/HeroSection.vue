@@ -12,7 +12,7 @@
 
           <!-- Main Heading -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 hero-animate" style="--delay: 0.3s">
-            <span class="t-heading">Wagner Philippe</span>
+            <span class="t-heading">Wagner</span>
             <br />
             <span class="text-gradient">Calazans</span>
           </h1>

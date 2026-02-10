@@ -96,7 +96,7 @@ export default defineEventHandler(async (event) => {
                 <div class="footer">
                   <div class="brand">
                     <div class="brand-icon">⚡</div>
-                    <span class="brand-name">WC PORTFOLIO</span>
+                    <span class="brand-name">WAGNER CALAZANS PORTFOLIO</span>
                   </div>
                   <p class="copyright">Enviado via Resend API • © ${new Date().getFullYear()} Wagner Calazans</p>
                 </div>

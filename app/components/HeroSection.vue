@@ -95,7 +95,7 @@
             <div class="relative" style="animation: hero-float 5s ease-in-out infinite">
               <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full glass-card p-2 glow">
                 <img
-                  src="https://storage.googleapis.com/hostinger-horizons-assets-prod/2e99a572-bf5a-49d1-b9e4-f5d73ae5b88a/4785ca265e5b489adb8e5985fb5e3509.png"
+                  src="/wagner.png"
                   alt="Wagner Calazans"
                   class="w-full h-full rounded-full object-cover"
                 />

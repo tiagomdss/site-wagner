@@ -1,11 +1,11 @@
 <template>
-  <section id="home" class="min-h-screen flex items-center justify-center relative pt-24 pb-16">
+  <section id="home" class="min-h-screen flex items-center justify-center relative pt-32 pb-16">
     <div class="max-w-7xl mx-auto px-6 w-full">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-8">
         <!-- Left Content -->
         <div class="text-center lg:text-left order-2 lg:order-1">
           <!-- Status Badge -->
-          <div class="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6 hero-animate" style="--delay: 0.2s">
+          <div class="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-8 hero-animate" style="--delay: 0.2s">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
             <span class="text-sm font-medium t-muted">Consultor de Ciberinfraestrutura, IAM, Alta disponibilidade e Projetos de PD&I</span>
           </div>

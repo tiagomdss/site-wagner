@@ -7,7 +7,7 @@
           <!-- Status Badge -->
           <div class="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6 hero-animate" style="--delay: 0.2s">
             <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-            <span class="text-sm font-medium t-muted">Disponível para projetos</span>
+            <span class="text-sm font-medium t-muted">Consultor de Ciberinfraestrutura, IAM, Alta disponibilidade e Projetos de PD&I</span>
           </div>
 
           <!-- Main Heading -->
@@ -20,8 +20,13 @@
           <!-- Title -->
           <div class="mb-6 hero-animate" style="--delay: 0.4s">
             <p class="text-xl sm:text-2xl text-sky-400 font-semibold mb-2">
-              Mestrando em Sistemas e Computação
+              Doutorando em Engenharia de Defesa Computacional
             </p>
+  
+            <p class="text-lg t-muted">
+              Mestre em Engenharia de Sistemas e Computação
+            </p>
+  
             <p class="text-lg t-muted">
               Engenheiro da Computação &amp; Analista de Sistemas
             </p>
@@ -137,11 +142,24 @@
 </template>
 
 <script setup lang="ts">
-import { Github, Linkedin, Mail, ArrowDown, Server, Shield, Cloud } from 'lucide-vue-next'
+import { 
+  Github, 
+  Linkedin, 
+  Mail, 
+  Server, 
+  Shield, 
+  Cloud, 
+  GraduationCap, // Para o Lattes
+  FileText,      // Para o Europass
+  Fingerprint    // Para o ORCID (remete a identidade digital)
+} from 'lucide-vue-next'
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+  { icon: Github, href: 'https://github.com/wagner-calazans', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/wagner-calazans', label: 'LinkedIn' },
+  { icon: GraduationCap, href: 'http://lattes.cnpq.br/7002908339055296', label: 'Lattes' },
+  { icon: Fingerprint, href: 'https://orcid.org/0009-0004-8259-9914', label: 'ORCID' },
+  { icon: FileText, href: 'https://europass.wagnercalazans.com', label: 'Europass' },
   { icon: Mail, href: '#contato', label: 'Email' },
 ]
 

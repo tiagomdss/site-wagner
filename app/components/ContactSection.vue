@@ -227,9 +227,9 @@ const contactInfo = [
   {
     icon: Phone,
     title: 'Telefone',
-    value: '+55 21 2141-7142',
+    value: '+55 21 3942-3832',
     description: 'Horário comercial',
-    link: 'tel:+552121417142',
+    link: 'tel:+552139423832',
     color: 'from-emerald-500 to-teal-500',
   },
   {

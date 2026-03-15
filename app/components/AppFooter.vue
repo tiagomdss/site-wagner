@@ -60,7 +60,7 @@
             <h4 class="text-lg font-bold t-heading mb-4">Contato</h4>
             <ul class="space-y-3 t-muted">
               <li>contato@wagnercalazans.com</li>
-              <li>+55 21 2141-7142</li>
+              <li>+55 21 3942-3832</li>
               <li>Rio de Janeiro, Brasil</li>
             </ul>
           </div>

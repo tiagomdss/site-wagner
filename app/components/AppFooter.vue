@@ -95,7 +95,7 @@
 </template>
 
 <script setup lang="ts">
-import { Heart, Github, Linkedin, Mail, ArrowUp, Terminal as TerminalIcon } from 'lucide-vue-next'
+import { Heart, Github, Linkedin, Mail, ArrowUp, Terminal as TerminalIcon, GraduationCap, Fingerprint, FileText} from 'lucide-vue-next'
 import { useIntersectionObserver } from '@vueuse/core'
 
 const quickLinks = [
@@ -107,8 +107,11 @@ const quickLinks = [
 ]
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+  { icon: Github, href: 'https://github.com/wagner-calazans', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/wagner-calazans', label: 'LinkedIn' },
+  { icon: GraduationCap, href: 'http://lattes.cnpq.br/7002908339055296', label: 'Lattes' },
+  { icon: Fingerprint, href: 'https://orcid.org/0009-0004-8259-9914', label: 'ORCID' },
+  { icon: FileText, href: 'https://europass.wagnercalazans.com', label: 'Europass' },
   { icon: Mail, href: 'mailto:contato@wagnercalazans.com', label: 'Email' },
 ]
 

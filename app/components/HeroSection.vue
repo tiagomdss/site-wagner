@@ -100,7 +100,7 @@
             <div class="relative" style="animation: hero-float 5s ease-in-out infinite">
               <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full glass-card p-2 glow">
                 <img
-                  src="/wagner.png"
+                  src="/wagner.jpeg"
                   alt="Wagner Calazans"
                   class="w-full h-full rounded-full object-cover"
                 />
